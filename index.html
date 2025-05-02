@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Főoldal</title>
+
+	<!--BOOTSRAP CSS-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+	<!--BOOTSRAP JS-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+
+</head>
+<body class="text-center container">
+  <br>
+  <h3>GAMF Autókereskedés</h3>
+
+  <!-- NAVBAR -->
+  <hr>
+  <div class="container">
+    <header class="d-flex justify-content-center py-3">
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Főoldal</a></li>
+        <li class="nav-item"><a href="elerheto.html" class="nav-link">Elérhető Autók</a></li>
+        <li class="nav-item"><a href="szerviz.html" class="nav-link">Szervíz</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Eladott autók</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Kapcsolat</a></li>
+      </ul>
+    </header>
+  </div>
+  <hr>
+
+  <!-- Képkarusszel -->
+<div id="mainCarousel" class="carousel slide mb-5 mx-auto" data-bs-ride="carousel" style="max-width: 900px;">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="carousel-img-wrapper">
+        <img src="img/bmwx5.png" alt="BMW X5">
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="carousel-img-wrapper">
+        <img src="img/golf.png" alt="GolfGTI">
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="carousel-img-wrapper">
+        <img src="img/merci.png" alt="Mercedes C200">
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
+<hr>
+  <!-- Információs kártyák -->
+  <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Vásárlás</h5>
+          <p class="card-text">Válogass több tucat elérhető modell közül raktárkészletről vagy egyedi igény szerint!</p>
+          <a href="elerheto.html"target="_blank"> <button class="btn btn-success">Elérhető Autók</button></a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Szerviz</h5>
+          <p class="card-text">Szakszerviz, olajcsere, hibakód olvasás és szezonális felkészítés – mindent ránk bízhatsz.</p>
+          <a href="szerviz.html"target="_blank"> <button class="btn btn-warning">Szervíz</button></a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Kapcsolat</h5>
+          <p class="card-text">Kérdésed van? Vedd fel velünk a kapcsolatot telefonon, emailben vagy személyesen!</p>
+          <a href="kapcsolat.html"target="_blank"> <button class="btn btn-primary">Kapcsolat</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

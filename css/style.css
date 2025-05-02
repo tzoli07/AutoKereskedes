@@ -1,0 +1,32 @@
+ body {
+      background: linear-gradient(100deg, #FF9A02, #FED404);
+ }
+
+
+#success-message {
+     display: none;
+     margin-top: 10px;
+     color: green;
+     font-weight: bold;
+ }
+
+
+  .card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+
+.carousel-img-wrapper {
+  width: 100%;
+  height: 500px; /* vagy amit szeretnél */
+  overflow: hidden;
+}
+
+.carousel-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* kitölti a helyet, nem torzít */
+}
