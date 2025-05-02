@@ -7,16 +7,24 @@
 
 	<!--BOOTSRAP CSS-->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+	
+	<!--SAJÁT CSS-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
 
 	<!--BOOTSRAP JS-->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 
-	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 
 
 </head>
 <body class="text-center container">
+  <button onclick="topFunction()" id="myBtn" title="Oldal teteje">
+    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"/>
+    </svg>
+  </button>
   <br>
   <h3>GAMF Autókereskedés</h3>
 
@@ -92,6 +100,26 @@
       </div>
     </div>
   </div>
+
+
+<!-- Top UP gomb -->
+<script>
+  window.onscroll = function() { scrollFunction(); };
+
+  function scrollFunction() {
+    const myBtn = document.getElementById("myBtn");
+    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+      myBtn.style.display = "block";
+    } else {
+      myBtn.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0; // Safari
+    document.documentElement.scrollTop = 0; // Chrome, Firefox, IE, Opera
+  }
+</script>
 </body>
 
 </html>
