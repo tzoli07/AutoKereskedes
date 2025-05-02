@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Kapcsolat</title>
+
+	<!--BOOTSRAP CSS-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+	
+	<!--SAJÁT CSS-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!--BOOTSRAP JS-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</head>
+
+<body class="text-center container">
+	 <button onclick="topFunction()" id="myBtn" title="Oldal teteje">
+	 	<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+  		<path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"/>
+		</svg>
+	</button>
+
+	<br>
+	<h3>Kapcsolat</h3>
+
+	<!--NAVBAR-->
+	<hr>
+	<div class="container">
+    	<header class="d-flex justify-content-center py-3">
+      		<ul class="nav nav-pills">
+	        	<li class="nav-item"><a href="index.html" class="nav-link " aria-current="page">Főoldal</a></li>
+	            <li class="nav-item"><a href="elerheto.html" class="nav-link ">Elérhető Autók</a></li>
+	            <li class="nav-item"><a href="szerviz.html" class="nav-link">Szervíz</a></li>
+	            <li class="nav-item"><a href="#" class="nav-link">Eladott autók</a></li>
+	            <li class="nav-item"><a href="kapcsolat.html" class="nav-link active">Kapcsolat</a></li>
+      		</ul>
+    	</header>
+  	</div>
+  	<hr>
+  	<!--NAVBAR Vége-->
+
+
+<!-- Kapcsolat űrlap -->
+<div class="container my-5">
+  <div class="row">
+    <div class="col-md-6">
+      <h4 class="mb-4">Lépjen kapcsolatba velünk!</h4>
+      <form onsubmit="event.preventDefault(); showSuccessModal(); this.reset();" class="needs-validation" >
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="name" placeholder="Név" required>
+          <label for="name">Név</label>
+          <div class="invalid-feedback">Kérjük, adja meg a nevét!</div>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="email" placeholder="Email cím" required>
+          <label for="email">Email cím</label>
+          <div class="invalid-feedback">Kérjük, adjon meg egy érvényes email címet!</div>
+        </div>
+
+        <div class="form-floating mb-3">
+          <textarea class="form-control" placeholder="Üzenet" id="message" style="height: 150px;" required></textarea>
+          <label for="message">Üzenet</label>
+          <div class="invalid-feedback">Kérjük, írja meg az üzenetét!</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Küldés</button>
+      </form>
+    </div>
+
+    <div class="col-md-6 mt-4 mt-md-0">
+      <h4 class="mb-3">Telephelyünk</h4>
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <td><b>Cím</b></td>
+            <td><b>Telefon</b></td>
+            <td><b>Email</b></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>6000 Kecskemét, Izsáki út 10.</td>
+            <td>+36 30 123 4567</td>
+            <td>info@autoceg.hu</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="ratio ratio-4x3">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2690.6790066471344!2d19.679931976548162!3d46.90516196588917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4743dcfa33106a6f%3A0xf50f15fa3fe4f899!2sKecskem%C3%A9t%2C%20Izs%C3%A1ki%20%C3%BAt%2010%2C%206000!5e0!3m2!1shu!2shu!4v1714644483265!5m2!1shu!2shu" 
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sikeres beküldés Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-success">
+      <div class="modal-header">
+        <h5 class="modal-title" id="successModalLabel"><b>Üzenet elküldve</b></h5>
+      </div>
+      <div class="modal-body">
+        Köszönjük, hamarosan felvesszük Önnel a kapcsolatot!
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<!-- Mottó -->
+<div class="container my-5">
+  <h4 class="mb-4">Az alábbi értékrendeket tartsuk mindíg szem előtt</h4>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <img src="img/uszi.png" class="card-img-top" alt="Autó 1">
+        <div class="card-body">
+          <h5 class="card-title">Kommunikáció</h5>
+          <p class="card-text">Nagyon Fontosnak tartjuk a kommunilációt a cég életében.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <img src="img/uszi1.png" class="card-img-top" alt="Autó 2">
+        <div class="card-body">
+          <h5 class="card-title">Rendelkezésre állás</h5>
+          <p class="card-text">A nap minden órájában elérhetőek vagyunk ügyfeleink számára.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <img src="img/uszi2.png" class="card-img-top" alt="Autó 3">
+        <div class="card-body">
+          <h5 class="card-title">Kérdezz nyugodtan</h5>
+          <p class="card-text">Cégünknél nem letézik buta kérdés, kérdezz nyugodtan kollégáinktól.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+	<!-- Modal megjelenítő script -->
+	<script>
+	  function showSuccessModal() {
+	    const modalElement = document.getElementById('successModal');
+	    const modal = new bootstrap.Modal(modalElement);
+	    modal.show();
+
+	    // Automatikus bezárás 3 másodperc után
+	    setTimeout(() => {
+	      modal.hide();
+	    }, 3000);
+	  }
+	</script>
+
+<!-- Top UP gomb -->
+<script>
+  window.onscroll = function() { scrollFunction(); };
+
+  function scrollFunction() {
+    const myBtn = document.getElementById("myBtn");
+    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+      myBtn.style.display = "block";
+    } else {
+      myBtn.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0; // Safari
+    document.documentElement.scrollTop = 0; // Chrome, Firefox, IE, Opera
+  }
+</script>
+</body>
+</html>
