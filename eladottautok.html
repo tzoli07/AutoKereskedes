@@ -11,9 +11,14 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="css/eladottautok.css">
 </head>
-<body>
+<body class="text-center container">
 
 <div class="container my-5">
+  <button onclick="topFunction()" id="myBtn" title="Oldal teteje">
+    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"/>
+    </svg>
+  </button>
   <h2 class="mb-4 eladottautok">Eladott autók listája</h2>
 
   <hr>
@@ -86,6 +91,25 @@
     });
   });
   </script>
-  
+
+
+<!-- Top UP gomb -->
+<script>
+  window.onscroll = function() { scrollFunction(); };
+
+  function scrollFunction() {
+    const myBtn = document.getElementById("myBtn");
+    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+      myBtn.style.display = "block";
+    } else {
+      myBtn.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0; // Safari
+    document.documentElement.scrollTop = 0; // Chrome, Firefox, IE, Opera
+  }
+</script>
 </body>
 </html>
